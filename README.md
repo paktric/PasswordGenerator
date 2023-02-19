@@ -1,4 +1,4 @@
-# *Project Title*
+# *Secure Password Generator*
 ### Project by **`Patrick Moran`**
 
 <table>
@@ -15,26 +15,26 @@
 
 # Project Overview
 ### Motivation
-*Explain what inspired the project*
+The idea for this project came when trying to create unique and secure passwords. If you are signed in to Google Chrome when creating an online account, Chrome has an option to generate a secure password and save the login information to your Google account. Often times, these are secure but unmemorable passwords like ```5tX`EH47_(dm/8rR$N\T?w;bt*v^nD```. Our goal is to recreate this password generation.
 
 ### Objective
-*Explain the objective / goal of the project*
+- Create a program that generates a unique and secure password
+- Allow the user to specifiy the length of the password
 
 <br />
 
 # Development Process
 ### Technologies Used
-- *List languages & frameworks*
-- *List technologies*
+- Java
 - GitHub for version control
 
 ### Implementation
-*Explain development process*
+The first step is to define an alphabet to use. For this, we'll use all uppercase and lowercase letters, numbers 0 thru 9, and all standard special characters. We concatenate these into one string called `Alphabet`. We can then use the SecureRandom class to select a random character from the `Alphabet` string. We concatenate these random characters to the password string until the password length has been reached, and then we return the password.
 
 ### Challenges
-*Explain issues that I ran into during the project and how I solved them*
+When using random number generators in programming, issues can arise with generating a truely random number. Resulting numbers may seem random, but are often easily predictable. For this reason, many languages have a feature like Java's [SecureRandom](https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html) class, which generates a better random number for security applications.
 
 <br />
 
 # Conclusion
-*Explain the conclusion the my project. Did I complete the objective? What did I learn from the project? How would I expand the project in the future?*
+The program is able to successfully generate a unique and secure password. These types of passwords are unmemorable and are best used with password-managment programs that manage your login credentials. I plan to expand this project by adding a program that will generate a *memorable* password.
