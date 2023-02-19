@@ -32,11 +32,7 @@ public class PasswordGenerator {
      */
     static String newPassword(int n){
         passwordLength = n;
-        password = "";
-        for(int i=0; i<passwordLength; i++){
-            password += alphabet.charAt(random.nextInt(alphabet.length()));
-        }
-        return password;
+        return newPassword();
     }
     
 }
