@@ -12,28 +12,35 @@ public class PasswordGenerator {
     private static final SecureRandom RANDOM = new SecureRandom();
 
     /**
-     * Method to generate a random password with a default 16-digit length
-     * @return Password as a String
-     */
-    static String newPassword(){
-        String password = "";
-        for(int i=0; i<DEFAULT_LENGTH; i++){
-            password += ALPHABET.charAt(RANDOM.nextInt(ALPHABET.length()));
-        }
-        return password;
-    }
-
-    /**
-     * Method to generate a random password with a user-specified length
+     * Private method to generate a random password of given length
      * @param length Length of password
      * @return Password as a String
      */
-    static String newPassword(int length){
+    private static String generate(int length){
         String password = "";
         for(int i=0; i<length; i++){
             password += ALPHABET.charAt(RANDOM.nextInt(ALPHABET.length()));
         }
         return password;
+    }
+
+    /////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * Public method to generate a random password with a default 16-digit length
+     * @return Password as a String
+     */
+    public static String newPassword(){
+        return generate(DEFAULT_LENGTH);
+    }
+
+    /**
+     * Public method to generate a random password with a user-specified length
+     * @param length Length of password
+     * @return Password as a String
+     */
+    public static String newPassword(int length){
+        return generate(length);
     }
 
 }
