@@ -15,7 +15,7 @@
 
 # Project Overview
 ### Motivation
-The idea for this project came from trying to create unique and secure passwords. When creating an online account, Google Chrome has an option to generate a secure password and save the login information to your Google account. Often times, these are secure but unmemorable passwords like ```5tX`EH47_(dm/8rR$N\T?w;bt*v^nD```. Our goal is to recreate this password generation.
+When creating an online account, Google Chrome has an option to generate a secure password and save the login information to your Google account. Often times, these are secure but unmemorable passwords like ```5tX`EH47_(dm/8rR$N\T?w;bt*v^nD```. The goal of this project is to create a similar password generation program.
 
 ### Objective
 - Create a program that generates a unique and secure password
