@@ -17,11 +17,11 @@ public class PasswordGenerator {
      * @return Password as a String
      */
     private static String generate(int length){
-        String password = "";
+        StringBuilder password = new StringBuilder(length);
         for(int i=0; i<length; i++){
-            password += ALPHABET.charAt(RANDOM.nextInt(ALPHABET.length()));
+            password.append(ALPHABET.charAt(RANDOM.nextInt(ALPHABET.length())));
         }
-        return password;
+        return password.toString();
     }
 
     /////////////////////////////////////////////////////////////////////////////
